@@ -13,10 +13,8 @@ services:
       replicas: 1
       resources:
         limits:
-          cpus: '0.5'
-          memory: 300m
-    working_dir: /home/workspace
-      - ./vscode/workspace:/home/workspace
+          cpus: '3'
+          memory: 1000m
     healthcheck:
       test: curl --fail http://localhost:8080||exit 1
       interval: 50s
